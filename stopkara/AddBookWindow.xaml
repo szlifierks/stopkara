@@ -3,10 +3,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:stopkara"
         mc:Ignorable="d"
         Title="AddBookWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel Margin="10">
+        <TextBlock Text="Tytuł" />
+        <TextBox x:Name="TytulBox" Margin="0,5,0,10" />
+
+        <TextBlock Text="Autor" />
+        <ComboBox x:Name="AutorBox" DisplayMemberPath="Name" Margin="0,5,0,10" />
+
+        <TextBlock Text="Gatunek" />
+        <ComboBox x:Name="GatunekBox" DisplayMemberPath="Name" Margin="0,5,0,10" />
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Anuluj" Margin="0,0,10,0" Click="Anuluj_OnClick" />
+            <Button Content="Zapisz" Click="Zapisz_OnClick" />
+        </StackPanel>
+    </StackPanel>
 </Window>
